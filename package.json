@@ -1,7 +1,6 @@
 {
-  "name": "rm-component-library",
-  "version": "0.1.0",
-  "private": true,
+  "name": "@simonjduckett/rmcomponents",
+  "version": "0.1.1",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -67,5 +66,14 @@
   "peerDependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/simonjduckett"
   }
+
 }
