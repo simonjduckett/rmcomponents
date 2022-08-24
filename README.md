@@ -9,6 +9,10 @@ This library project uses storybook, 'npm run storybook'
 
 To build run 'npm run rollup-build'
 
+Build Static Storybook - npm run build-storybook
+
 ## Publish
 
 To publish run 'npm publish' - requires access token
+
+Push to chromatic server 'npm run chromatic'
