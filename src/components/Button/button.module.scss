@@ -28,4 +28,11 @@
             background: -webkit-linear-gradient(top, #1b1b1b, #2b2b2b);
         }
     }
+    .trans {
+        background: transparent;
+        border: 2px solid #452765;
+        border-radius: 5px;
+        padding: 10px;
+        color: #452765;
+    }
 }

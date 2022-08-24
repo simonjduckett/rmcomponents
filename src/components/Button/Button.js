@@ -6,6 +6,7 @@ const Button = ({label = 'btn', type = '', onClick}) => {
     let btnType = {}
     if (type === 'primary') btnType = styles.primary
     if (type === 'secondary') btnType = styles.secondary
+    if (type === 'trans') btnType = styles.trans
 
     return ( 
         <button onClick={onClick} className={styles.btn}>
