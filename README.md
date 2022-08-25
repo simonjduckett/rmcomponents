@@ -5,6 +5,8 @@ really moving react component library
 
 This library project uses storybook, 'npm run storybook'
 
+Run Tests = 'npm test'
+
 ## Build
 
 To build run 'npm run rollup-build'
