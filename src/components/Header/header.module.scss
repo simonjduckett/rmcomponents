@@ -1,11 +1,13 @@
 .header {
     background-color: none;
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
     border-bottom: 1px solid #452765;
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+    }
     .btn {
         text-align: center;
         border: 2px solid #452765;

@@ -6,8 +6,10 @@ import Button from '../Button/Button'
 const Header = () => {
     return ( 
         <header className={styles.header}>
-            <img src={logo} />
-            <Button label='Retrieve quotes' type='trans' />
+            <div className={styles.wrapper}>
+                <img src={logo} />
+                <Button label='Retrieve quotes' type='trans' />
+            </div>
         </header>
      );
 }

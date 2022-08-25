@@ -23,3 +23,8 @@ trans.args = {
     label: 'Retrieve quotes',
     type: 'trans'
 }
+export const test = Template.bind({})
+test.args = {
+    label: 'test quotes',
+    type: 'primary'
+}
