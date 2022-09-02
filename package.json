@@ -5,11 +5,19 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test:coverage": "react-scripts test --watchAll=false --coverage",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 public",
     "build-storybook": "build-storybook public",
     "rollup-build": "rollup -c",
     "chromatic": "npx chromatic --project-token=067f0fc01d2c"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "<rootDir>/src/components/**/*.{js,jsx}",
+      "!**/node_modules/**",
+      "!**/*.stories.{js,jsx}"
+    ]
   },
   "eslintConfig": {
     "overrides": [
