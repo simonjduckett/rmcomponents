@@ -7,16 +7,27 @@
     li {
         margin-bottom: 4px;
         margin-left: 2rem;
+        font-family: "roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
         &::before {
-            color: $rm-pink;
-            content: "";
-            display: inline-block;
-            font-family: 'icomoon-icon-fonts';
-            font-weight: bold;
-            margin-left: -2rem;
-            padding-left: 0;
-            vertical-align: middle;
-            width: 2rem;
-        }
+                content: "";
+                display: inline-block;
+                font-family: 'icomoon-icon-fonts';
+                font-weight: bold;
+                margin-left: -2rem;
+                padding-left: 0;
+                vertical-align: middle;
+                width: 1.5rem;
+            }
+    }
+}
+.pink {
+    li::before {
+        color: $rm-pink;
+    }
+}
+
+.green {
+    li::before {
+        color: $rm-mid-green;
     }
 }

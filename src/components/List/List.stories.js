@@ -11,12 +11,16 @@ export default {
 const Template = ({ numberOfChildren, ...args }) => (
     <List {...args}>
         {[...Array(numberOfChildren).keys()].map(n => (
-            <li>List Item</li>
+            <List.Item>List Item</List.Item>
         ))}
     </List>
 )
 
-export const Rmlist = Template.bind({})
-Rmlist.args = {
-
+export const RmlistPinkTicks = Template.bind({})
+RmlistPinkTicks.args = {
+    pink: "pink"
+}
+export const RmlistGreenTicks = Template.bind({})
+RmlistGreenTicks.args = {
+    green: "green"
 }
