@@ -1,0 +1,21 @@
+@import '../../global/styles/vars';
+
+.list {
+    list-style-type: none;
+    padding-left: 0px;
+    li {
+        margin-bottom: 4px;
+        margin-left: 2rem;
+        &::before {
+            color: $rm-pink;
+            content: "";
+            display: inline-block;
+            font-family: 'icomoon-icon-fonts';
+            font-weight: bold;
+            margin-left: -2rem;
+            padding-left: 0;
+            vertical-align: middle;
+            width: 2rem;
+        }
+    }
+}
