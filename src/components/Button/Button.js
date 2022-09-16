@@ -8,6 +8,7 @@ const Button = props => {
     if (props.type === 'primary') btnType = styles.primary
     if (props.type === 'secondary') btnType = styles.secondary
     if (props.type === 'trans') btnType = styles.trans
+    if (props.type === 'account') btnType = styles.account
 
     if(props.lg) btnSize = styles.lg
     if(props.sm) btnSize = styles.sm
@@ -15,7 +16,9 @@ const Button = props => {
 
     return ( 
         <button onClick={props.onClick} className={styles.btn}>
-            <span className={`${btnType} ${btnSize}`}>{props.label}</span>
+            <a href={props.link}>
+                <span className={`${btnType} ${btnSize}`}>{props.label}</span>
+            </a>
         </button>
      );
 }

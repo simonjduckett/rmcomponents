@@ -10,7 +10,9 @@ const Template = args => <Button {...args} />
 export const Primary = Template.bind({})
 Primary.args = {
     label: 'See quotes',
-    type: 'primary'
+    type: 'primary',
+    //link: 'https://google.com',
+    onClick: () => alert('hey, don\'t click')
 }
 
 export const Secondary = Template.bind({})
@@ -22,6 +24,12 @@ export const trans = Template.bind({})
 trans.args = {
     label: 'Retrieve quotes',
     type: 'trans'
+}
+export const account = Template.bind({})
+account.args = {
+    label: 'Log in',
+    type: 'account',
+    sm: 'sm'
 }
 export const Large = Template.bind({})
 Large.args = {

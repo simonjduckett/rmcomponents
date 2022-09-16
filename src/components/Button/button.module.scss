@@ -17,6 +17,9 @@
         color: #fff;
         white-space: normal;
     }
+    a {
+        text-decoration: none;
+    }
     .primary {
         background: -webkit-linear-gradient(top, #f70e92, #c40069);
         &:hover {
@@ -35,6 +38,10 @@
         border-radius: 5px;
         padding: 10px;
         color: #452765;
+    }
+    .account {
+        background: -webkit-linear-gradient(top, #1ace9b, #17b489);
+        min-width: 140px;
     }
 }
 
