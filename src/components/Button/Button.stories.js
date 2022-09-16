@@ -23,8 +23,21 @@ trans.args = {
     label: 'Retrieve quotes',
     type: 'trans'
 }
-export const test = Template.bind({})
-test.args = {
-    label: 'test quotes',
-    type: 'primary'
+export const Large = Template.bind({})
+Large.args = {
+    label: 'Get conveyancing init',
+    type: 'primary',
+    lg: 'lg'
+}
+export const Small = Template.bind({})
+Small.args = {
+    label: 'Get conveyancing init',
+    type: 'primary',
+    sm: 'sm'
+}
+export const XSmall = Template.bind({})
+XSmall.args = {
+    label: 'Get conveyancing init',
+    type: 'primary',
+    xs: 'xs'
 }

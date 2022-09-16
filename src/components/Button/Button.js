@@ -2,15 +2,20 @@ import React from "react"
 import PropTypes from "prop-types"
 import styles from "./button.module.scss"
 
-const Button = ({label = 'btn', type = '', onClick}) => {
+const Button = props => {
     let btnType = {}
-    if (type === 'primary') btnType = styles.primary
-    if (type === 'secondary') btnType = styles.secondary
-    if (type === 'trans') btnType = styles.trans
+    let btnSize = {}
+    if (props.type === 'primary') btnType = styles.primary
+    if (props.type === 'secondary') btnType = styles.secondary
+    if (props.type === 'trans') btnType = styles.trans
+
+    if(props.lg) btnSize = styles.lg
+    if(props.sm) btnSize = styles.sm
+    if(props.xs) btnSize = styles.xs
 
     return ( 
-        <button onClick={onClick} className={styles.btn}>
-            <span className={btnType}>{label}</span>
+        <button onClick={props.onClick} className={styles.btn}>
+            <span className={`${btnType} ${btnSize}`}>{props.label}</span>
         </button>
      );
 }

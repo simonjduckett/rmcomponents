@@ -16,15 +16,14 @@ const List = props => {
      );
 }
 
-const ListItem = (props) => {
-    return (
-        <li>{props.children}</li>
-    )
-} 
+const ListItem = props => <li>{props.children}</li>
 List.Item = ListItem;
 
 const ListHeading = props => <h2>{props.children}</h2>
 List.Heading = ListHeading
+
+const ListBody = props => <p>{props.children}</p>
+List.Body = ListBody
 
 List.propTypes = {
     usp: PropTypes.string
