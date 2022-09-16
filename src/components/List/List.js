@@ -6,6 +6,8 @@ const List = props => {
     let type = null
     if(props.pink) type = styles.pink
     if(props.green) type = styles.green
+    if(props.pinkbullet) type = styles.pinkBullet
+    if(props.pinkchevron) type = styles.pinkChevron
 
     return ( 
         <ul className={`${styles.list} ${type ? type : null}`}>
@@ -20,6 +22,9 @@ const ListItem = (props) => {
     )
 } 
 List.Item = ListItem;
+
+const ListHeading = props => <h2>{props.children}</h2>
+List.Heading = ListHeading
 
 List.propTypes = {
     usp: PropTypes.string

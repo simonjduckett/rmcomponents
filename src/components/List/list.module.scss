@@ -5,29 +5,46 @@
     list-style-type: none;
     padding-left: 0px;
     li {
-        margin-bottom: 4px;
+        margin-bottom: 2rem;
         margin-left: 2rem;
         font-family: "roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
+        *:nth-child(1) {
+            display: inline-block;
+            margin-top: 0;
+        }
         &::before {
-                content: "";
-                display: inline-block;
-                font-family: 'icomoon-icon-fonts';
-                font-weight: bold;
-                margin-left: -2rem;
-                padding-left: 0;
-                vertical-align: middle;
-                width: 1.5rem;
-            }
+            content: "";
+            display: inline-block;
+            font-family: 'icomoon-icon-fonts';
+            font-weight: bold;
+            margin-left: -2rem;
+            padding-left: 0;
+            vertical-align: top;
+            width: 2rem;
+            font-size: 1.5rem;
+        }
+        h2 {
+            margin: 0;
+        }
     }
 }
-.pink {
-    li::before {
-        color: $rm-pink;
-    }
+.pink li::before {
+    color: $rm-pink;
 }
 
-.green {
-    li::before {
-        color: $rm-mid-green;
-    }
+.green li::before {
+    color: $rm-mid-green;
+    font-size: 1.6rem;
+}
+.pinkBullet li::before {
+    color: $rm-pink;
+    content: "⬤";
+    font-size: 1rem;
+    margin-left: -2rem;
+}
+.pinkChevron li::before {
+    color: $rm-pink;
+    content: "";
+    font-family: 'icomoon-icon-fonts';
+    font-size: 1.6rem;
 }
