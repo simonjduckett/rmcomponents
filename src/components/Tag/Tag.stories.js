@@ -7,7 +7,7 @@ export default {
 
 const Template = args => <Tag {...args} />
 
-export const Tag1 = Template.bind({})
-Tag1.args = {
-    tag: 'removals, home'
+export const TagExample = Template.bind({})
+TagExample.args = {
+    tag: 'Buying a house, Finding a house, Moving home, General Moving Advice'
 }

@@ -6,7 +6,11 @@
     font-size: .875em;
     font-weight: 400;
     p {
-        margin: 0 0 3px 40px;
+        display: flex;
+        align-items: center;
+        margin: 0 0 3px 0px;
+        font-family: Arial, Helvetica, sans-serif;
+        text-transform: capitalize;
         &::before {
             content: "";
             display: inline-block;

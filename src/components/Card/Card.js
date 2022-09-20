@@ -19,6 +19,9 @@ Card.Img = CardImg;
 
 const CardBody = props => <div className={styles.rmCardBody}>{props.children}</div>
 Card.Body = CardBody
+
+const CardFooter = props => <div className={styles.rmCardFooter}>{props.children}</div>
+Card.Footer = CardFooter
  
 export default Card;
 

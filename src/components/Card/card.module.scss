@@ -1,5 +1,7 @@
 @import '../../global/styles/vars';
 
+$cardPadding: 20px;
+
 .card {
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
@@ -26,7 +28,7 @@
 }
 
 .rmCardBody {
-    padding: 20px;
+    padding: $cardPadding;
 }
 .CardImg {
     img {
@@ -38,6 +40,9 @@
         object-fit: cover;
         width: 100%;
     }
+}
+.rmCardFooter {
+    padding: $cardPadding;
 }
 .imgResponsive {
     display: block;
