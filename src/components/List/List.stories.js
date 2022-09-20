@@ -13,7 +13,7 @@ const Template = ({ numberOfChildren, ...args }) => (
     <List {...args}>
         {[...Array(numberOfChildren).keys()].map(n => (
             <List.Item>
-                <List.Heading>Simons Great</List.Heading>
+                <List.Heading>List Heading</List.Heading>
                 <List.Body>I am a bigger paragraph of text. I am a bigger paragraph of text.I am a bigger paragraph of text.</List.Body>
                 <Button sm label='Find out more' type='primary'/>
             </List.Item>

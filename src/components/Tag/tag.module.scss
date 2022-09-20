@@ -1,0 +1,19 @@
+@import '../../global/styles/vars';
+@import '../../global/styles/fonts';
+
+.tag {
+    color: #000;
+    font-size: .875em;
+    font-weight: 400;
+    p {
+        margin: 0 0 3px 40px;
+        &::before {
+            content: "";
+            display: inline-block;
+            font-family: 'icomoon-icon-fonts';
+            font-size: 3.5rem;
+            margin-right: 5px;
+            vertical-align: middle;
+        }
+    }
+}

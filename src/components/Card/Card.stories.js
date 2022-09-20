@@ -1,6 +1,7 @@
 import Card from './Card'
 import cardimg from '../../Images/article.png'
 import List from '../List'
+import Rmicon from '../Rmicon'
 
 export default {
     title: "Components/Card",
@@ -9,6 +10,7 @@ export default {
 
 const Template = args => <Card {...args}>
     <Card.Img src={cardimg} />
+    {/* <Rmicon icon='star' /> */}
     <Card.Body>
         <h3>Does my conveyancing solicitor need to be local?</h3>
         <p>My card</p>
