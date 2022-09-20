@@ -10,11 +10,17 @@ const Card = props => {
      );
 }
 
-const CardBody = props => <div>{props.children}</div>
+const CardImg = props => (
+    <a className={styles.CardImg} href={props.link}>
+    <img className={styles.imgResponsive} src={props.src} />
+</a>
+ )
+Card.Img = CardImg;
+
+const CardBody = props => <div className={styles.rmCardBody}>{props.children}</div>
 Card.Body = CardBody
  
 export default Card;
 
 
 //card header, card body, card footer
-
