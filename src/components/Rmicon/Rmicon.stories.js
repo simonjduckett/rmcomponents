@@ -23,3 +23,13 @@ export const costsAndFees = Template.bind({})
 costsAndFees.args = {
     icon: 'costsAndFees'
 }
+export const scaleMd = Template.bind({})
+scaleMd.args = {
+    icon: 'house',
+    md: 'md'
+}
+export const scaleSm = Template.bind({})
+scaleSm.args = {
+    icon: 'house',
+    sm: 'sm'
+}

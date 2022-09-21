@@ -10,6 +10,9 @@ const Card = props => {
      );
 }
 
+const CardTitle = props => <h3 className={styles.rmCardTitle}>{props.children}</h3>
+Card.Title = CardTitle
+
 const CardImg = props => (
     <a className={styles.CardImg} href={props.link}>
     <img className={styles.imgResponsive} src={props.src} />

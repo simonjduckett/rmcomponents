@@ -5,6 +5,13 @@
     vertical-align: middle;
 }
 
+.rmIconSm {
+    transform: scale(.5);
+}
+.rmIconMd {
+    transform: scale(.8);
+}
+
 .advertising {
     background-position: -5px -5px;
     width: 100px;

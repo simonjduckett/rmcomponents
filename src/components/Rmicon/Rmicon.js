@@ -4,8 +4,15 @@ import styles from "./rmicon.module.scss"
 
 const Rmicon = props => {
     let icon = props.icon
+    
     let i = null
+    let s = null
 
+    //scale
+    if (props.sm) s = styles.rmIconSm
+    if (props.md) s = styles.rmIconMd
+
+    //icons
     if(icon === 'advertising') i = styles.advertising
     if(icon === 'arrowDown') i = styles.arrowDown
     if(icon === 'arrowFwd') i = styles.arrowFwd
@@ -82,7 +89,7 @@ const Rmicon = props => {
     if(icon === 'beds6plus') i = styles.beds6plus
 
     return ( 
-        <i className={`${styles.rmIcon} ${i}`}></i>
+        <i className={`${styles.rmIcon} ${i} ${s}`}></i>
      );
 }
  
