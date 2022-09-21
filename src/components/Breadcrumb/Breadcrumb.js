@@ -4,12 +4,12 @@ import styles from "./Breadcrumb.module.scss"
 
 const Breadcrumb = ({children}) => {
     return ( 
-        <ol>{children}</ol>
+        <ol className={styles.breadcrumb}>{children}</ol>
      );
 }
 
 const crumb = props => (
-    <li><a href={props.link}>{props.children}</a></li>
+    <li className={styles.crumb}><a href={props.link}>{props.children}</a></li>
 )
 Breadcrumb.Crumb = crumb
 
