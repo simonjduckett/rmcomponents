@@ -8,7 +8,11 @@ const Pagination = ({children}) => {
      );
 }
 
-const Page = ({children}) => <li className={styles.page}>{children}</li>
+const Page = ({children, link}) => (
+    <li className={styles.page}>
+        <a href={link}>{children}</a>
+    </li>
+)
 Pagination.Page = Page
 
 export default Pagination;
