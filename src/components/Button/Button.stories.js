@@ -33,19 +33,19 @@ account.args = {
 }
 export const Large = Template.bind({})
 Large.args = {
-    label: 'Get conveyancing init',
+    label: 'Get conveyancing quotes',
     type: 'primary',
     lg: 'lg'
 }
 export const Small = Template.bind({})
 Small.args = {
-    label: 'Get conveyancing init',
+    label: 'Get conveyancing quotes',
     type: 'primary',
     sm: 'sm'
 }
 export const XSmall = Template.bind({})
 XSmall.args = {
-    label: 'Get conveyancing init',
+    label: 'Get conveyancing quotes',
     type: 'primary',
     xs: 'xs'
 }
