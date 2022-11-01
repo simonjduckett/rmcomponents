@@ -19,3 +19,7 @@ export const Twenty = Template.bind({})
 Twenty.args = {
     type: 'twenty',
 }
+export const Footer = Template.bind({})
+Footer.args = {
+    type: 'footer',
+}
