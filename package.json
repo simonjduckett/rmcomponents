@@ -1,6 +1,6 @@
 {
   "name": "@simonjduckett/rmcomponents",
-  "version": "0.1.5",
+  "version": "0.1.7",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -57,6 +57,7 @@
     "@storybook/preset-create-react-app": "^4.1.2",
     "@storybook/react": "^6.5.10",
     "@storybook/testing-library": "^0.0.13",
+    "@svgr/rollup": "^6.5.1",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.3.0",
     "babel-plugin-named-exports-order": "^0.0.2",

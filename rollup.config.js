@@ -5,6 +5,7 @@ import commonjs from 'rollup-plugin-commonjs';
 import postcss from 'rollup-plugin-postcss';
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 import image from '@rollup/plugin-image';
+import svgr from '@svgr/rollup'
 
 export default {
     input: './src/index.js',
@@ -37,7 +38,8 @@ export default {
         }),
         resolve(),
         commonjs(),
-        image()
+        image(),
+        svgr({ exportType: 'named', jsxRuntime: 'automatic' }),
     ],
 
     external: ['react', 'react-dom'],
