@@ -1,6 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import styles from "./rmicon.module.scss"
+import sprite from "../../Images/icon-spritesheet.png"
 
 const Rmicon = props => {
     let icon = props.icon
@@ -89,7 +90,7 @@ const Rmicon = props => {
     if(icon === 'beds6plus') i = styles.beds6plus
 
     return ( 
-        <i className={`${styles.rmIcon} ${i} ${s}`}></i>
+        <i className={`${styles.rmIcon} ${i} ${s}`} style={{backgroundImage: `url(${sprite})`}}></i>
      );
 }
  
