@@ -12,7 +12,7 @@ export default {
 const Template = ({ numberOfChildren, ...args }) => (
     <List {...args}>
         {[...Array(numberOfChildren).keys()].map(n => (
-            <List.Item>
+            <List.Item icon='faCheck'>
                 <List.Heading>List Heading</List.Heading>
                 <List.Body>I am a bigger paragraph of text. I am a bigger paragraph of text.I am a bigger paragraph of text.</List.Body>
                 <Button sm label='Find out more' type='primary'/>
@@ -23,7 +23,7 @@ const Template = ({ numberOfChildren, ...args }) => (
 
 export const RmlistPinkTicks = Template.bind({})
 RmlistPinkTicks.args = {
-    pink: "pink"
+    pink: "pink",
 }
 export const RmlistGreenTicks = Template.bind({})
 RmlistGreenTicks.args = {

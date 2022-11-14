@@ -1,13 +1,17 @@
 import React from "react"
 import PropTypes from "prop-types"
 import styles from "./list.module.scss"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCheck, faChevronRight, faCircle } from '@fortawesome/free-solid-svg-icons'
+
+let icon = null
 
 const List = props => {
     let type = null
-    if(props.pink) type = styles.pink
-    if(props.green) type = styles.green
-    if(props.pinkbullet) type = styles.pinkBullet
-    if(props.pinkchevron) type = styles.pinkChevron
+    if(props.pink) {icon = faCheck; type = styles.pink}
+    if(props.green) { icon = faCheck; type = styles.green }
+    if(props.pinkbullet) {icon = faCircle, type = styles.pinkBullet}
+    if(props.pinkchevron) { icon = faChevronRight; type = styles.pinkChevron }
 
     return ( 
         <ul className={`${styles.list} ${type ? type : null}`}>
@@ -16,7 +20,14 @@ const List = props => {
      );
 }
 
-const ListItem = props => <li>{props.children}</li>
+const ListItem = props => {
+    return (
+        <li>
+            <div><FontAwesomeIcon icon={icon} /></div>
+            <div>{props.children}</div>
+        </li>
+    )
+}
 List.Item = ListItem;
 
 const ListHeading = props => <h2>{props.children}</h2>
