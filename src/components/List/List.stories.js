@@ -12,7 +12,7 @@ export default {
 const Template = ({ numberOfChildren, ...args }) => (
     <List {...args}>
         {[...Array(numberOfChildren).keys()].map(n => (
-            <List.Item icon='faCheck'>
+            <List.Item>
                 <List.Heading>List Heading</List.Heading>
                 <List.Body>I am a bigger paragraph of text. I am a bigger paragraph of text.I am a bigger paragraph of text.</List.Body>
                 <Button sm label='Find out more' type='primary'/>
