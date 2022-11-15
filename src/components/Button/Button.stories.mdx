@@ -1,0 +1,39 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs';
+
+import Button from './Button'
+
+<Meta title="BUTTONS/Button" component={Button} />
+
+export const Template = args => <Button {...args} />
+
+# Button
+Sizes
+<Canvas>
+    <Story
+    name = "Large"
+    args = {{
+        label: 'Large',
+        type: 'primary',
+        lg: 'lg'
+    }}>
+        { Template.bind({}) }
+    </Story>
+    <Story
+    name = "Small"
+    args = {{
+        label: 'Small',
+        type: 'primary',
+        sm: 'sm'
+    }}>
+        { Template.bind({}) }
+    </Story>
+    <Story
+    name = "X Small"
+    args = {{
+        label: 'X Small',
+        type: 'primary',
+        xs: 'xs'
+    }}>
+        { Template.bind({}) }
+    </Story>
+</Canvas>
