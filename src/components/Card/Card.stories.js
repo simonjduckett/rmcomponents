@@ -5,7 +5,7 @@ import Rmicon from '../Rmicon'
 import Tag from '../Tag'
 
 export default {
-    title: "Components/Card",
+    title: "Blocks/Card",
     component: Card
 }
 

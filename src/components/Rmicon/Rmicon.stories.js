@@ -1,7 +1,7 @@
 import Rmicon from './Rmicon'
 
 export default {
-    title: "Components/Rmicon",
+    title: "Icons/Rmicon",
     component: Rmicon
 }
 
