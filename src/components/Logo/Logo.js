@@ -12,7 +12,7 @@ const Logo = ({type = 'horizontal', width = '300px'}) => {
     let logo = null
 
     if (type === 'horizontal') {
-        return <Horizontal width={width} />
+        return <Horizontal width={width} fill='#000000' style={{fill: '#000'}}/>
     } 
     if(type === 'stacked') {
         return <Stacked width={width}  />

@@ -15,7 +15,7 @@ const Template = ({ numberOfChildren, ...args }) => (
             <List.Item>
                 <List.Heading>List Heading</List.Heading>
                 <List.Body>I am a bigger paragraph of text. I am a bigger paragraph of text.I am a bigger paragraph of text.</List.Body>
-                <Button sm label='Find out more' type='primary'/>
+                {/* <Button sm label='Find out more' type='primary'/> */}
             </List.Item>
         ))}
     </List>
