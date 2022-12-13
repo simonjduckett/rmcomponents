@@ -1,14 +1,18 @@
 import React from "react"
+import { Row, Col } from 'react-bootstrap'
 
 const ColorCards = (props) => {
     return (
-        <div style={{display: 'flex', fontFamily: 'arial', flexWrap: 'wrap'}}>
-            {props.colors.map(color => {
-                return (
-                    <ColorCard color={color} />
-                )
-            })}
-        </div>
+        <Row>
+            
+                {props.colors.map(color => {
+                    return (
+                        <Col sm={6} md={3}>
+                            <ColorCard color={color} />
+                        </Col>
+                    )
+                })}
+        </Row>
      );
 }
  
@@ -21,7 +25,7 @@ const ColorCard = ({color}) => {
         border: '1px solid #ddd',
         borderRadius: '10px',
         overflow: 'hidden',
-        width: '20%'
+        // width: '20%'
     }
     return (
         <div style={styles}>

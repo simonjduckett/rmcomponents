@@ -8,6 +8,7 @@
     "test:coverage": "react-scripts test --watchAll=false --coverage",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 public",
+    "storybook-docs": "start-storybook --docs --no-manager-cache",
     "build-storybook": "build-storybook public",
     "rollup-build": "rollup -c",
     "chromatic": "npx chromatic --project-token=067f0fc01d2c"

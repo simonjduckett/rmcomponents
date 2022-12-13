@@ -2,15 +2,17 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs';
 
 import Button from './Button'
 
-<Meta title="Components/Buttons/Button" component={Button} />
+<Meta title="Components/Button" component={Button} />
 
 export const Template = args => <Button {...args} />
 
 # Button
+
 Sizes
 <Canvas>
+    {/* bit of hack to get it to display how I want */}
     <Story
-    name = "Large"
+    name = "Sizes"
     args = {{
         label: 'Large',
         type: 'primary',
@@ -19,7 +21,7 @@ Sizes
         { Template.bind({}) }
     </Story>
     <Story
-    name = "Small"
+    name = "_hidden_Small"
     args = {{
         label: 'Small',
         type: 'primary',
@@ -28,7 +30,7 @@ Sizes
         { Template.bind({}) }
     </Story>
     <Story
-    name = "X Small"
+    name = "_hidden_X Small"
     args = {{
         label: 'X Small',
         type: 'primary',
@@ -41,7 +43,7 @@ Sizes
 Kinds
 <Canvas>
     <Story
-    name = "Primary"
+    name = "Kinds"
     args = {{
         label: 'Primary',
         type: 'primary'
@@ -49,7 +51,7 @@ Kinds
         { Template.bind({}) }
     </Story>
     <Story
-    name = "Secondary"
+    name = "_hidden_Secondary"
     args = {{
         label: 'Secondary',
         type: 'secondary'
@@ -57,7 +59,7 @@ Kinds
         { Template.bind({}) }
     </Story>
     <Story
-    name = "Transparent"
+    name = "_hidden_Transparent"
     args = {{
         label: 'Transparent',
         type: 'trans'
@@ -65,7 +67,7 @@ Kinds
         { Template.bind({}) }
     </Story>
     <Story
-    name = "Account"
+    name = "_hidden_Account"
     args = {{
         label: 'Account',
         type: 'account'
