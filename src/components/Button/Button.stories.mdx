@@ -1,14 +1,51 @@
-import { Canvas, Meta, Story } from '@storybook/addon-docs';
+import { Canvas, Meta, Story, ArgsTable } from '@storybook/addon-docs';
 
 import Button from './Button'
+import HeaderSimple from '../HeaderSimple'
 
-<Meta title="Components/Button" component={Button} />
+<Meta 
+    title="Components/Button" 
+    component={Button}
+    argTypes={{
+    type: {
+      options: ['primary', 'secondary', 'trans', 'account'],
+      control: { type: 'radio' }
+    },
+    size: {
+      options: ['xs', 'sm', 'lg'],
+      control: { type: 'radio' }
+    }
+  }}
+/>
 
 export const Template = args => <Button {...args} />
 
-# Button
+<HeaderSimple title='Button' />  
 
-Sizes
+## Overview
+
+Buttons allow users to trigger an action or event with a single click. For example, you can use a button for allowing the functionality of submitting a form, opening a dialog or canceling an action.
+
+<Canvas>
+    <Story
+    name = "Overview"
+    args = {{
+        label: 'Button',
+        type: 'primary',
+        size: 'sm'
+    }}>
+        { Template.bind({}) }
+    </Story>
+</Canvas>
+
+## Props
+
+<ArgsTable story="Overview" />
+
+
+## Varients
+
+### Sizes
 <Canvas>
     {/* bit of hack to get it to display how I want */}
     <Story
@@ -16,7 +53,7 @@ Sizes
     args = {{
         label: 'Large',
         type: 'primary',
-        lg: 'lg'
+        size: 'lg'
     }}>
         { Template.bind({}) }
     </Story>
@@ -25,7 +62,7 @@ Sizes
     args = {{
         label: 'Small',
         type: 'primary',
-        sm: 'sm'
+        size: 'sm'
     }}>
         { Template.bind({}) }
     </Story>
@@ -34,13 +71,13 @@ Sizes
     args = {{
         label: 'X Small',
         type: 'primary',
-        xs: 'xs'
+        size: 'xs'
     }}>
         { Template.bind({}) }
     </Story>
 </Canvas>
 
-Kinds
+### Kinds
 <Canvas>
     <Story
     name = "Kinds"

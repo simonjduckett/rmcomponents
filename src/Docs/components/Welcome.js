@@ -37,7 +37,7 @@ const Welcome = () => {
                         <p>View documentation on each component.</p>
                     </Card.Body>
                     <Card.Footer>
-                        <a href='/?path=/docs/components-buttons-button--large'>Read more</a>
+                        <a href='/?path=/docs/components-button--overview'>Read more</a>
                     </Card.Footer>
                 </Card>
             </Col>

@@ -4,18 +4,21 @@ import styles from "./button.module.scss"
 
 const Button = props => {
     let btnType = {}
-    let btnSize = {}
+    let btnSize = styles.sm
     if (props.type === 'primary') btnType = styles.primary
     if (props.type === 'secondary') btnType = styles.secondary
     if (props.type === 'trans') btnType = styles.trans
     if (props.type === 'account') btnType = styles.account
 
-    if(props.lg) btnSize = styles.lg
-    if(props.sm) btnSize = styles.sm
-    if(props.xs) btnSize = styles.xs
+    if(props.size === 'lg') btnSize = styles.lg
+    if(props.size === 'sm') btnSize = styles.sm
+    if(props.size === 'xs') btnSize = styles.xs
 
     return ( 
-        <button onClick={props.onClick} className={styles.btn}>
+        <button 
+        onClick={props.onClick} 
+        className={`${props.customClass ? props.customClass : null} ${styles.btn}`}
+        >
             <a href={props.link}>
                 <span className={`${btnType} ${btnSize}`}>{props.label}</span>
             </a>
@@ -26,7 +29,9 @@ const Button = props => {
 Button.propTypes = {
     label: PropTypes.string,
     type: PropTypes.string,
-    onClick: PropTypes.func
+    onClick: PropTypes.func,
+    size: PropTypes.string,
+    customClass: PropTypes.string
 }
  
 export default Button;
