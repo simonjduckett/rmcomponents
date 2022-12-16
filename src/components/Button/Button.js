@@ -1,6 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import styles from "./button.module.scss"
+import { propTypes } from "react-bootstrap/esm/Image"
 
 const Button = props => {
     let btnType = {}
@@ -17,7 +18,9 @@ const Button = props => {
     return ( 
         <button 
         onClick={props.onClick} 
-        className={`${props.customClass ? props.customClass : null} ${styles.btn}`}
+        className={`${props.customClass ? props.customClass : ''} ${styles.btn}`}
+        id={props.id ? props.id : null}
+        name={props.name ? props.name : null}
         >
             <a href={props.link}>
                 <span className={`${btnType} ${btnSize}`}>{props.label}</span>
@@ -31,7 +34,9 @@ Button.propTypes = {
     type: PropTypes.string,
     onClick: PropTypes.func,
     size: PropTypes.string,
-    customClass: PropTypes.string
+    customClass: PropTypes.string,
+    id: PropTypes.string,
+    name: PropTypes.string
 }
  
 export default Button;
