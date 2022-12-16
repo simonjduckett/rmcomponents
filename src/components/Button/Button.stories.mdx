@@ -7,13 +7,31 @@ import HeaderSimple from '../HeaderSimple'
     title="Components/Button" 
     component={Button}
     argTypes={{
+    label: {
+        description: 'The button text',
+    },
     type: {
       options: ['primary', 'secondary', 'trans', 'account'],
-      control: { type: 'radio' }
+      control: { type: 'radio' },
+      defaultValue: 'Primary',
+        description: 'The type of button',
     },
     size: {
       options: ['xs', 'sm', 'lg'],
-      control: { type: 'radio' }
+      control: { type: 'radio' },
+      description: 'The size of the button'
+    },
+    customClass: {
+        description: 'Custom class names to pass to the component'
+    },
+    id: {
+        description: 'id to pass to the button'
+    },
+    name: {
+        description: 'Name of the button - for form submit usages'
+    },
+    onClick: {
+        description: 'Callback function for button to trigger.'
     }
   }}
 />
