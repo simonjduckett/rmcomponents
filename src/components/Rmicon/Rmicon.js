@@ -10,8 +10,8 @@ const Rmicon = props => {
     let s = null
 
     //scale
-    if (props.sm) s = styles.rmIconSm
-    if (props.md) s = styles.rmIconMd
+    if (props.size === 'sm') s = styles.rmIconSm
+    if (props.size === 'md') s = styles.rmIconMd
 
     //icons
     if(icon === 'advertising') i = styles.advertising
@@ -92,6 +92,11 @@ const Rmicon = props => {
     return ( 
         <i className={`${styles.rmIcon} ${i} ${s}`} style={{backgroundImage: `url(${sprite})`}}></i>
      );
+}
+
+Rmicon.PropTypes = {
+    icon: PropTypes.string,
+    size: PropTypes.string
 }
  
 export default Rmicon;
