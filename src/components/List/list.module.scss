@@ -1,14 +1,15 @@
 @import '../../global/styles/vars';
-//@import '../../global/styles/fonts';
+@import '../../global/styles/fonts';
 
 .list {
     list-style-type: none;
     padding-left: 0px;
     li {
-        margin-bottom: 2rem;
-        margin-left: 1rem;
+        //margin-bottom: 2rem;
+        //margin-left: 1rem;
         font-family: "roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
         display: flex;
+        align-items: center;
         div:first-child {
             padding: 5px 10px;
         }
@@ -35,34 +36,49 @@
         h2 {
             margin: 0;
         }
+        &::before {
+            font-size: 1.6rem;
+            content: "";
+            display: inline-block;
+            font-family: 'icomoon-icon-fonts';
+            font-weight: bold;
+            //margin-left: -2rem;
+            padding-left: 0;
+            vertical-align: top;
+            //width: 2rem;
+            font-size: 1.5rem;
+        }
     }
 }
-.pink li svg {
+.pink li::before {
     color: $rm-pink;
 }
-
-.green li svg {
+.green li::before {
     color: $rm-mid-green;
 }
-.pinkBullet li svg{
+.pinkBullet li::before {
     color: $rm-pink;
+    content: "⬤";
+    font-size: 1rem;
+    margin-top: -3px;
+    //margin-left: -2rem;
 }
-.pinkChevron li svg {
+.pinkChevron li::before {
     color: $rm-pink;
+    content: "";
+    font-family: 'icomoon-icon-fonts';
+    font-size: 1.6rem;
 }
-// .green li::before {
+// .pink li svg {
+//     color: $rm-pink;
+// }
+
+// .green li svg {
 //     color: $rm-mid-green;
-//     font-size: 1.6rem;
 // }
-// .pinkBullet li::before {
+// .pinkBullet li svg{
 //     color: $rm-pink;
-//     content: "⬤";
-//     font-size: 1rem;
-//     margin-left: -2rem;
 // }
-// .pinkChevron li::before {
+// .pinkChevron li svg {
 //     color: $rm-pink;
-//     content: "";
-//     font-family: 'icomoon-icon-fonts';
-//     font-size: 1.6rem;
 // }
