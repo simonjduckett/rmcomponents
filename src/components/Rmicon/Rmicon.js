@@ -94,7 +94,7 @@ const Rmicon = props => {
      );
 }
 
-Rmicon.PropTypes = {
+Rmicon.propTypes = {
     icon: PropTypes.string,
     size: PropTypes.string
 }
