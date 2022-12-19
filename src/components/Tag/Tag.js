@@ -12,5 +12,9 @@ const Tag = props => {
         </div>
      );
 }
+
+Tag.propTypes = {
+   tag: PropTypes.string
+}
  
 export default Tag;
