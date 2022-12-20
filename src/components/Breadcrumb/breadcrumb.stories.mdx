@@ -1,10 +1,11 @@
 import { Canvas, Meta, Story, ArgsTable } from '@storybook/addon-docs';
 
 import Breadcrumb from './Breadcrumb'
+import Crumb from '../Crumb'
 import HeaderSimple from '../HeaderSimple'
 
 <Meta 
-    title="Components/Breadcrumb" 
+    title="Components/Breadcrumb/Breadcrumb" 
     component={Breadcrumb}
     argTypes={{
     Breadcrumb: {
@@ -15,9 +16,9 @@ import HeaderSimple from '../HeaderSimple'
 
 export const Template = args => (
     <Breadcrumb {...args}>
-        <Breadcrumb.Crumb>Home</Breadcrumb.Crumb>
-        <Breadcrumb.Crumb>Conveyancing</Breadcrumb.Crumb>
-        <Breadcrumb.Crumb>Partners</Breadcrumb.Crumb>
+        <Crumb>Home</Crumb>
+        <Crumb>Conveyancing</Crumb>
+        <Crumb>Partners</Crumb>
     </Breadcrumb>
 )
 

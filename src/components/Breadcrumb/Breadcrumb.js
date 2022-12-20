@@ -8,9 +8,4 @@ const Breadcrumb = ({children}) => {
      );
 }
 
-const crumb = props => (
-    <li className={styles.crumb}><a href={props.link}>{props.children}</a></li>
-)
-Breadcrumb.Crumb = crumb
-
 export default Breadcrumb;
