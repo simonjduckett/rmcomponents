@@ -82,7 +82,9 @@
     "rollup-plugin-postcss": "^4.0.2",
     "sass": "^1.54.4",
     "web-vitals": "^2.1.4",
-    "webpack": "^5.74.0"
+    "webpack": "^5.74.0",
+    "bootstrap": "^5.2.3",
+    "react-bootstrap": "^2.7.0"
   },
   "peerDependencies": {
     "react": "^18.2.0",
@@ -102,8 +104,6 @@
     "@fortawesome/fontawesome-svg-core": "^6.2.0",
     "@fortawesome/free-solid-svg-icons": "^6.2.0",
     "@fortawesome/react-fontawesome": "^0.2.0",
-    "bootstrap": "^5.2.3",
-    "icomoon-react": "^3.0.0",
-    "react-bootstrap": "^2.7.0"
+    "icomoon-react": "^3.0.0"
   }
 }

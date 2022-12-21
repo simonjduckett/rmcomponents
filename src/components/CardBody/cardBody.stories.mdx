@@ -1,0 +1,36 @@
+import { Canvas, Meta, Story, ArgsTable } from '@storybook/addon-docs';
+
+import CardBody from './CardBody'
+import HeaderSimple from '../HeaderSimple'
+
+<Meta 
+    title="Components/Card/CardBody" 
+    component={CardBody}
+    argTypes={{
+    CardBody: {
+        description: 'Text to go in CardBody'
+    }
+  }}
+/>
+
+export const Template = args => <CardBody {...args} />
+
+<HeaderSimple title='CardBody' />
+
+## Overview
+
+CardBodys can be used to label items such as cards to help users find what they are looking for and also improve SEO.
+
+<Canvas>
+    <Story
+    name = "Overview"
+    args = {{
+        CardBody: 'Home, removals'
+    }}>
+        { Template.bind({}) }
+    </Story>
+</Canvas>
+
+## Props
+
+<ArgsTable story="Overview" />

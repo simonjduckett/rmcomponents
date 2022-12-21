@@ -1,0 +1,51 @@
+import { Canvas, Meta, Story, ArgsTable } from '@storybook/addon-docs';
+
+import Card from './Card'
+import CardTitle from '../CardTitle'
+import CardBody from '../CardBody'
+import CardFooter from '../CardFooter'
+import HeaderSimple from '../HeaderSimple'
+
+<Meta 
+    title="Components/Card/Card" 
+    component={Card}
+    argTypes={{
+    Card: {
+        description: 'Text to go in Card'
+    }
+  }}
+/>
+
+export const Template = args => 
+<Card {...args}>
+    <CardTitle>
+        Conveyancing advice
+    </CardTitle>
+    <CardBody>
+        {/* <h3>Does my conveyancing solicitor need to be local?</h3> */}
+        <p>The Bank of England recently removed a required test for those looking to get a mortgage. So what does this mean for the future of the process?</p>
+    </CardBody>
+    <CardFooter>
+        <a href='#'>Read more</a>
+    </CardFooter>
+</Card>
+
+<HeaderSimple title='Card' />
+
+## Overview
+
+Cards are used to display content.
+
+<Canvas>
+    <Story
+    name = "Overview"
+    args = {{
+        Card: 'Home, removals'
+    }}>
+        { Template.bind({}) }
+    </Story>
+</Canvas>
+
+## Props
+
+<ArgsTable story="Overview" />

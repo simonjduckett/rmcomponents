@@ -1,6 +1,6 @@
 @import '../../global/styles/vars';
 
-$cardPadding: 20px;
+
 
 .card {
     -webkit-border-radius: 3px;
@@ -29,44 +29,7 @@ $cardPadding: 20px;
         //margin-bottom: 45px;
     }
 }
-.rmCardTitle {
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
-    background-color: #f8f8f8;
-    border: 1px solid #e6e6e6;
-    margin: 0;
-    padding: 20px;
-    a {
-        color: #452765;
-        display: inline-block;
-        font-family: "roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
-        font-size: .8125em;
-        font-weight: 500;
-        margin-top: 30px;
-        padding-right: 10px;
-        padding-bottom: 5px;
-    }
-}
 
-.rmCardBody {
-    padding: $cardPadding;
-}
-.CardImg {
-    img {
-        border-top-left-radius: 2px;
-        border-top-right-radius: 2px;
-        border-bottom-right-radius: 0;
-        border-bottom-left-radius: 0;
-        height: 240px;
-        object-fit: cover;
-        width: 100%;
-    }
-}
-.rmCardFooter {
-    padding: $cardPadding;
-}
 .imgResponsive {
     display: block;
     max-width: 100%;
