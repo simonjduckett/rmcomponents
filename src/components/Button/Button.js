@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import styles from "./button.module.scss"
 
 const Button = props => {
-    let btnType = {}
+    let btnType = styles.primary
     let btnSize = styles.sm
     if (props.type === 'primary') btnType = styles.primary
     if (props.type === 'secondary') btnType = styles.secondary

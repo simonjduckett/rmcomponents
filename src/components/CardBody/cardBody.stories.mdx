@@ -6,26 +6,21 @@ import HeaderSimple from '../HeaderSimple'
 <Meta 
     title="Components/Card/CardBody" 
     component={CardBody}
-    argTypes={{
-    CardBody: {
-        description: 'Text to go in CardBody'
-    }
-  }}
 />
 
-export const Template = args => <CardBody {...args} />
+export const Template = args => <CardBody {...args}></CardBody>
 
 <HeaderSimple title='CardBody' />
 
 ## Overview
 
-CardBodys can be used to label items such as cards to help users find what they are looking for and also improve SEO.
+CardBody to used inside the Card component.
 
 <Canvas>
     <Story
     name = "Overview"
     args = {{
-        CardBody: 'Home, removals'
+        children: 'Card body'
     }}>
         { Template.bind({}) }
     </Story>

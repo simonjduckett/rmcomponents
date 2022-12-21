@@ -6,11 +6,6 @@ import HeaderSimple from '../HeaderSimple'
 <Meta 
     title="Components/Card/CardFooter" 
     component={CardFooter}
-    argTypes={{
-    CardFooter: {
-        description: 'Text to go in CardFooter'
-    }
-  }}
 />
 
 export const Template = args => <CardFooter {...args} />
@@ -19,13 +14,13 @@ export const Template = args => <CardFooter {...args} />
 
 ## Overview
 
-CardFooters can be used to label items such as cards to help users find what they are looking for and also improve SEO.
+Card Footer to be used inside the Card component.
 
 <Canvas>
     <Story
     name = "Overview"
     args = {{
-        CardFooter: 'Home, removals'
+        children: 'Home, removals'
     }}>
         { Template.bind({}) }
     </Story>

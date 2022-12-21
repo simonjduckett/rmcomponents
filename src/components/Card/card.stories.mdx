@@ -5,13 +5,29 @@ import CardTitle from '../CardTitle'
 import CardBody from '../CardBody'
 import CardFooter from '../CardFooter'
 import HeaderSimple from '../HeaderSimple'
+import Rmicon from '../Rmicon'
+import Button from '../Button'
 
 <Meta 
     title="Components/Card/Card" 
     component={Card}
     argTypes={{
-    Card: {
-        description: 'Text to go in Card'
+    theme: {
+        description: 'Set a color theme, adds a class.',
+        options: ['light', 'purple'],
+        control: 'radio',
+        defaultValue: 'light',
+        table: {
+            defaultValue: {summary: 'light'}
+        }
+    },
+    align: {
+        description: 'Text alignment',
+        options: ['left', 'center'],
+        control: 'radio',
+        table: {
+            defaultValue: { summary: 'left' },
+        }
     }
   }}
 />
@@ -26,7 +42,8 @@ export const Template = args =>
         <p>The Bank of England recently removed a required test for those looking to get a mortgage. So what does this mean for the future of the process?</p>
     </CardBody>
     <CardFooter>
-        <a href='#'>Read more</a>
+        {/* <a href='#'>Read more</a> */}
+        <Button label='See your quotes' />
     </CardFooter>
 </Card>
 
@@ -40,7 +57,7 @@ Cards are used to display content.
     <Story
     name = "Overview"
     args = {{
-        Card: 'Home, removals'
+        align: 'left'
     }}>
         { Template.bind({}) }
     </Story>

@@ -6,11 +6,6 @@ import HeaderSimple from '../HeaderSimple'
 <Meta 
     title="Components/Card/CardTitle" 
     component={CardTitle}
-    argTypes={{
-    CardTitle: {
-        description: 'Text to go in CardTitle'
-    }
-  }}
 />
 
 export const Template = args => <CardTitle {...args} />
@@ -19,13 +14,13 @@ export const Template = args => <CardTitle {...args} />
 
 ## Overview
 
-CardTitles can be used to label items such as cards to help users find what they are looking for and also improve SEO.
+Card Title to be used inside Card component.
 
 <Canvas>
     <Story
     name = "Overview"
     args = {{
-        CardTitle: 'Home, removals'
+        children: 'Home, removals'
     }}>
         { Template.bind({}) }
     </Story>
