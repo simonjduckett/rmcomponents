@@ -1,3 +1,30 @@
+@import '../../global/styles/vars';
+
 .navbar {
     border: 1px solid #000;
+}
+
+.navbar.purple {
+    background-color: $rm-purple;
+    border: none;
+    a {
+        color: #fff !important;
+        text-transform: capitalize;
+        font-weight: 700;
+        &:hover {
+            background-color: $rm-pink;
+        }
+    }
+    div {
+        background-color: $rm-lilac;
+        color: #000;
+        border: none;
+        a {
+            color: #000 !important;
+            font-weight: 500;
+            &:hover {
+                color: #fff !important;
+            }
+        }
+    }
 }
