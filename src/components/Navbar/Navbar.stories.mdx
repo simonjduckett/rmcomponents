@@ -4,7 +4,9 @@ import Navbar from './Navbar'
 import Nav from '../Nav'
 import NavLink from '../NavLink'
 import NavDropdown from '../NavDropdown'
+import NavCollapse from '../NavCollapse'
 import DropdownItem from '../DropdownItem'
+import NavToggle from '../NavToggle'
 import HeaderSimple from '../HeaderSimple'
 import Button from '../Button'
 
@@ -22,34 +24,37 @@ import Button from '../Button'
 
 export const Template = args => 
 <Navbar {...args}>
-    <Nav>
-        <NavLink href='#'>Home</NavLink>
-        <NavDropdown title='conveyancing' icon={true}>
-            <DropdownItem href='#'>dropdown item</DropdownItem>
-            <DropdownItem href='#'>dropdown item</DropdownItem>
-            <DropdownItem href='#'>dropdown item</DropdownItem>
-        </NavDropdown>
-        <NavDropdown title='surveyors' icon={true}>
-            <DropdownItem href='#'>dropdown item</DropdownItem>
-            <DropdownItem href='#'>dropdown item</DropdownItem>
-            <DropdownItem href='#'>dropdown item</DropdownItem>
-            <NavDropdown title='energy performance'>
-                <DropdownItem href='#'>EPC</DropdownItem>
-                <DropdownItem href='#'>EPC Our partners</DropdownItem>
+    <NavToggle navid='mainNav' />
+    <NavCollapse id='mainNav' bp='md' bg='452765'>
+        <Nav>
+            <NavLink href='#'>Home</NavLink>
+            <NavDropdown title='conveyancing' icon='down'>
+                <DropdownItem href='#'>dropdown item</DropdownItem>
+                <DropdownItem href='#'>dropdown item</DropdownItem>
+                <DropdownItem href='#'>dropdown item</DropdownItem>
             </NavDropdown>
-        </NavDropdown>
-        <NavDropdown title='removals' icon={true}>
-            <DropdownItem href='#'>dropdown item</DropdownItem>
-            <DropdownItem href='#'>dropdown item</DropdownItem>
-            <DropdownItem href='#'>dropdown item</DropdownItem>
-        </NavDropdown>
-        <NavDropdown title='help & advice' icon={true}>
-            <DropdownItem href='#'>dropdown item</DropdownItem>
-            <DropdownItem href='#'>dropdown item</DropdownItem>
-            <DropdownItem href='#'>dropdown item</DropdownItem>
-        </NavDropdown>
-        <NavLink href='#'>blog</NavLink>
-    </Nav>
+            <NavDropdown title='surveyors' icon='down'>
+                <DropdownItem href='#'>dropdown item</DropdownItem>
+                <DropdownItem href='#'>dropdown item</DropdownItem>
+                <DropdownItem href='#'>dropdown item</DropdownItem>
+                <NavDropdown title='energy performance' icon='right'>
+                    <DropdownItem href='#'>EPC</DropdownItem>
+                    <DropdownItem href='#'>EPC Our partners</DropdownItem>
+                </NavDropdown>
+            </NavDropdown>
+            <NavDropdown title='removals' icon='down'>
+                <DropdownItem href='#'>dropdown item</DropdownItem>
+                <DropdownItem href='#'>dropdown item</DropdownItem>
+                <DropdownItem href='#'>dropdown item</DropdownItem>
+            </NavDropdown>
+            <NavDropdown title='help & advice' icon='down'>
+                <DropdownItem href='#'>dropdown item</DropdownItem>
+                <DropdownItem href='#'>dropdown item</DropdownItem>
+                <DropdownItem href='#'>dropdown item</DropdownItem>
+            </NavDropdown>
+            <NavLink href='#'>blog</NavLink>
+        </Nav>
+    </NavCollapse>
 </Navbar>
 
 <HeaderSimple title='Navbar' />

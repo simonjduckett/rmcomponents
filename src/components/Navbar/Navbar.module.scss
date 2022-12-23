@@ -4,6 +4,7 @@
     border: 1px solid #000;
 }
 
+//purple theme
 .navbar.purple {
     background-color: $rm-purple;
     border: none;
@@ -15,7 +16,7 @@
             background-color: $rm-pink;
         }
     }
-    div {
+    li div {
         background-color: $rm-lilac;
         color: #000;
         border: none;
