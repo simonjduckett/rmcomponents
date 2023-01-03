@@ -6,7 +6,7 @@
     display: flex;
     position: relative;
     cursor: pointer;
-    &:nth-of-type(1) .dropdown {
+    .NavDropdown .dropdown {
         left: 100%;
         top: 0px;
     }

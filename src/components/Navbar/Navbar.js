@@ -2,14 +2,14 @@ import React from "react";
 import PropTypes from "prop-types"
 import styles from './Navbar.module.scss'
 
-const Navbar = props => {
+const NavBar = props => {
     return ( 
         <nav className={`${props.theme === 'purple' ? styles.purple : null} ${styles.navbar}`}>{props.children}</nav>
      );
 }
 
-Navbar.propTypes = {
+NavBar.propTypes = {
     theme: PropTypes.string
 }
  
-export default Navbar;
+export default NavBar;

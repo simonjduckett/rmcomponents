@@ -21,9 +21,9 @@ const Button = props => {
         id={props.id ? props.id : null}
         name={props.name ? props.name : null}
         >
-            <a href={props.link}>
+            {/* <a href={props.link}> */}
                 <span className={`${btnType} ${btnSize}`}>{props.label}</span>
-            </a>
+            {/* </a> */}
         </button>
      );
 }
