@@ -1,0 +1,32 @@
+.footer {
+    background-color: #1c1c1c;
+    padding: 60px 0 30px;
+    color: rgb(165, 165, 165) !important;
+    li:before {
+        color: rgb(165, 165, 165) !important;
+        font-size: 1.6rem;
+    }
+    a {
+        text-decoration: none;
+        color: rgb(165, 165, 165) !important;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    h3 {
+        color: #e6e6e6 !important;
+        font-size: 1.4375em;
+        margin-top: 0;
+        padding-bottom: 10px;
+        font-family: 'Galano SemiBold' !important;
+    }
+    li {
+        
+        padding: 0 !important;
+        div {
+            padding: 0 0 14px 5px !important;
+            // margin-bottom: 1.4rem;
+            // margin-left: 2rem;
+        }
+    }
+}

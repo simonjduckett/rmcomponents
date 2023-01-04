@@ -31,7 +31,9 @@ const RmHeader = props => {
                                     return <NavLink key={i} href={link.href}>{link.name}</NavLink>
                                 })
                                 : null}
-                                <NavLink href="https://www.reallymoving.com/retrieve-your-quotes"><Button label='Retrieve quotes' type='trans' /></NavLink>
+                                <NavLink href="https://www.reallymoving.com/retrieve-your-quotes">
+                                    <Button label='Retrieve quotes' type='trans' />
+                                </NavLink>
                             </Nav>
                         </NavCollapse>
                     </Col>
