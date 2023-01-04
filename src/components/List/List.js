@@ -10,19 +10,17 @@ const List = props => {
     if(props.type === 'pinkchevron') {type = styles.pinkChevron }
 
     return ( 
-        <ul className={`${styles.list} ${type ? type : null}`}>
+        <ul 
+            className={`${styles.list} ${type ? type : null} ${props.customClass ? props.customClass : null}`}
+            id={props.id ? props.id : null}
+        >
             {props.children}
         </ul>
      );
 }
 
-const ListHeading = props => <h2>{props.children}</h2>
-List.Heading = ListHeading
-
-const ListBody = props => <p>{props.children}</p>
-List.Body = ListBody
-
 List.propTypes = {
+    id: PropTypes.string,
     type: PropTypes.string
 }
  

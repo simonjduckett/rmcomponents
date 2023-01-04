@@ -8,11 +8,14 @@ import HeaderSimple from '../HeaderSimple'
     title="Components/List/List" 
     component={List}
     argTypes={{
-    type: {
-        description: 'Type of list',
-        options: ['pink', 'green', 'pinkbullet', 'pinkchevron'],
-        control: { type: 'radio' },
-    }
+        id: {
+            description: 'Give the list an id'
+        },
+        type: {
+            description: 'Type of list',
+            options: ['pink', 'green', 'pinkbullet', 'pinkchevron'],
+            control: { type: 'radio' },
+        }
   }}
 />
 

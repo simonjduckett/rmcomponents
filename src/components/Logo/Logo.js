@@ -7,18 +7,23 @@ import { ReactComponent as Stacked } from "../../Images/RM_Logo_stack.svg"
 import { ReactComponent as Footer } from "../../Images/RM-logo-footer.svg"
 import twenty from "../../Images/logo-20yrs.png"
 
-const Logo = ({type = 'horizontal', width = '300px'}) => {
+const Logo = props => {
 
-    let logo = null
+    let logo = 'horizontal'
+    let width = '300px'
+    let type = 'horizontal'
+    if (props.type === 'stacked') type = 'stacked'
+    if (props.type === 'footer') type = 'footer'
+    if (props.type === 'twenty') type = 'twenty'
 
     if (type === 'horizontal') {
-        return <Horizontal width={width} fill='#000000' style={{fill: '#000'}}/>
+        return <Horizontal className={`${props.customClass ? props.customClass : null}`} width={props.width ? props.width : width} fill='#000000' style={{fill: '#000'}}/>
     } 
     if(type === 'stacked') {
-        return <Stacked width={width}  />
+        return <Stacked className={`${props.customClass ? props.customClass : null}`} width={props.width ? props.width : width}  />
     }
     if(type === 'footer') {
-        return <Footer width={width}  />
+        return <Footer className={`${props.customClass ? props.customClass : null}`} width={props.width ? props.width : width}  />
     }
     if(type === 'twenty') {
         logo = twenty
@@ -28,7 +33,8 @@ const Logo = ({type = 'horizontal', width = '300px'}) => {
 
 Logo.propTypes = {
     type: PropTypes.string,
-    width: PropTypes.string
+    width: PropTypes.string,
+    customClass: PropTypes.string
 }
 
 export default Logo;

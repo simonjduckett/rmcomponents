@@ -2,6 +2,10 @@ import React from "react";
 import styles from './RmFooter.module.scss'
 import { Row, Col, Container } from 'react-bootstrap'
 import { Logo, List, ListItem } from '../../components'
+import Facebook from '../../Images/facebook.svg'
+import twitter from '../../Images/twitter.svg'
+import instagram from '../../Images/instagram.svg'
+import linkedin from '../../Images/linkedin.svg'
 
 const RmFooter = () => {
     return ( 
@@ -10,10 +14,10 @@ const RmFooter = () => {
                 <Row>
                     <Col sm={3}>
                         <h3>Contact us</h3>
-                        <List>
+                        <List customClass={styles.contact}>
                             <ListItem>
                                 <p>
-                                    <span>Reallymoving.com Ltd</span>
+                                    <span style={{fontWeight: '400'}}>Reallymoving.com Ltd</span>
                                     <br />
                                     Eclipse Court
                                     <br />
@@ -24,9 +28,11 @@ const RmFooter = () => {
                                     AL1 3YD
                                 </p>
                             </ListItem>
+                            <ListItem>Tel: 01727 238010</ListItem>
+                            <ListItem>
+                                <a href='mailto:info@reallymoving.com'>Email: info@reallymoving.com</a>
+                            </ListItem>
                         </List>
-                        <ListItem></ListItem>
-                        <ListItem></ListItem>
                     </Col>
                     <Col sm={3}>
                         <h3>Services</h3>
@@ -54,12 +60,34 @@ const RmFooter = () => {
                         </List>
                     </Col>
                     <Col sm={3}>
-                        <Logo type='footer' />
+                        <Logo type='footer' customClass={styles.logo} />
+                        <Row>
+                            <Col md={3}>
+                                <a target='_blank' href='http://www.facebook.com/reallymoving'>
+                                    <img width='45' src={Facebook} />
+                                </a>
+                            </Col>
+                            <Col md={3}>
+                                <a target='_blank' href='http://twitter.com/#!/reallymoving'>
+                                    <img width='45' src={twitter} />
+                                </a>
+                            </Col>
+                            <Col md={3}>
+                                <a target='_blank' href='https://www.instagram.com/wearereallymoving/'>
+                                    <img width='45' src={instagram} />
+                                </a>
+                            </Col>
+                            <Col md={3}>
+                                <a target='_blank' href='https://www.linkedin.com/company/reallymoving-com'>
+                                    <img width='45' src={linkedin} />
+                                </a>
+                            </Col>
+                        </Row>
                     </Col>
                 </Row>
-                <Row>
+                <Row style={{marginTop: '70px'}}>
                     <Col sm={12} className='text-center'>
-                        © Reallymoving.com ltd {new Date().getFullYear()}
+                        <strong>© Reallymoving.com ltd {new Date().getFullYear()}</strong>
                     </Col>
                 </Row>
             </Container>
