@@ -64,14 +64,37 @@
     color: #fff;
 }
 .mobQuoteNav {
+    display: none;
     position: fixed;
     inset: 0;
     background-color: rgba(0,0,0,0.7);
     z-index: 10;
     ul {
+        padding: 10px;
         background-color: #fff;
         width: fit-content;
-        position: fixed;
-        bottom: 84px;
+        position: absolute;
+        //position: fixed;
+        bottom: 82px;
+        z-index: 11;
+        margin: auto;
+        left: 50%;
+        transform: translate(-50%);
+        li {
+            &:first-of-type {
+                font-weight: 700;
+                padding-top: 0;
+            }
+            div:first-child {
+                padding-bottom: 0;
+            }
+            border-bottom: 1px solid #f8f8f8;
+            padding: 10px 0;
+        }
+        a {
+            text-decoration: none;
+            font-weight: lighter;
+            color: #333 !important;
+        }
     }
 }
