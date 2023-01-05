@@ -1,3 +1,5 @@
+@import '../../global/styles/vars';
+
 .btn {
     border: none;
     width: auto;
@@ -37,7 +39,12 @@
         border: 2px solid #452765;
         border-radius: 5px;
         padding: 10px;
-        color: #452765;
+        color: #666 !important;
+        font-weight: 500 !important;
+        &:hover {
+            background: #ededed;
+            color: $rm-purple !important;
+        }
     }
     .account {
         background: -webkit-linear-gradient(top, #1ace9b, #17b489);

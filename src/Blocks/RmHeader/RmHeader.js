@@ -1,6 +1,8 @@
 import React from 'react'
 import { Row, Col, Container } from "react-bootstrap";
 import { Nav, NavBar, NavCollapse, NavDropdown, NavLink, NavToggle, DropdownItem, Logo, Button } from '../../components';
+import BottomBar from '../BottomBar/BottomBar';
+import styles from './RmHeader.module.scss';
 
 function genLinks(link, icon = 'down') {
     return (
@@ -15,12 +17,12 @@ function genLinks(link, icon = 'down') {
 
 const RmHeader = props => {
     return ( 
-        <header id={props.id ? props.id : null}>
-            <Container>
+        <header id={props.id ? props.id : null} className={styles.header}>
+            <Container style={{minHeight: 'auto', position: 'relative'}}>
                 <Row>
                     <Col xs={12} sm={3} md={4}>
                         <a href='/'>
-                            <Logo />
+                            <Logo customClass={styles.logo} />
                         </a>
                     </Col>
                     <Col xs={12} sm={9} md={8}>
@@ -28,10 +30,10 @@ const RmHeader = props => {
                             <Nav customClass='justify-content-end'>
                                 {props.topnav ?
                                 props.topnav.links.map((link, i) => {
-                                    return <NavLink key={i} href={link.href}>{link.name}</NavLink>
+                                    return <NavLink customClass={styles.topNavLink} key={i} href={link.href}>{link.name}</NavLink>
                                 })
                                 : null}
-                                <NavLink href="https://www.reallymoving.com/retrieve-your-quotes">
+                                <NavLink customClass={styles.topBtn} href="https://www.reallymoving.com/retrieve-your-quotes">
                                     <Button label='Retrieve quotes' type='trans' />
                                 </NavLink>
                             </Nav>
@@ -40,10 +42,9 @@ const RmHeader = props => {
                 </Row>
             </Container>
             <NavBar theme='purple'>
-                <NavToggle navid='mainNav' />
                 <Container>
                     <NavCollapse id='mainNav' bp='md' bg='452765'>
-                        <Nav>
+                        <Nav customClass={styles.mainNav}>
                             {props.nav ?
                             props.nav.links.map((link, i) => {
                                 if(link.type === 'link') {
@@ -59,6 +60,7 @@ const RmHeader = props => {
                     </NavCollapse>
                 </Container>
             </NavBar>
+            <BottomBar />
         </header>
      );
 }

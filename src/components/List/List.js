@@ -21,7 +21,8 @@ const List = props => {
 
 List.propTypes = {
     id: PropTypes.string,
-    type: PropTypes.string
+    type: PropTypes.string,
+    customClass: PropTypes.string
 }
  
 export default List;

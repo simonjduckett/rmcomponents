@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import styles from "./logo.module.scss"
 
-import { ReactComponent as Horizontal } from "../../Images/RM-logo-vector.svg"
+import { ReactComponent as Horizontal } from "../../Images/RM_logo.svg"
 import { ReactComponent as Stacked } from "../../Images/RM_Logo_stack.svg"
 import { ReactComponent as Footer } from "../../Images/RM-logo-footer.svg"
 import twenty from "../../Images/logo-20yrs.png"

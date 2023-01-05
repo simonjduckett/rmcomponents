@@ -1,0 +1,43 @@
+@import '../../global/styles/mixins';
+
+.header {
+    a {
+        color: #666 !important;
+        font-weight: 500;
+    }
+}
+.topNavLink a {
+    &:hover {
+        text-decoration: underline;
+    }
+    font-size: 14px;
+    @include breakpoint('lg') {
+        padding: 10px 8px;
+    }
+}
+.mainNav a {
+    font-weight: 500 !important;
+}
+.logo {
+    margin-left: -30px;
+    //position: absolute;
+    top: -10px;
+    // left: 0;
+    width: 301px;
+    @include breakpoint('lg') {
+        width: 252px;
+        top: 0;
+    }
+    @include breakpoint('md') {
+        width: 217px;
+        top: 0;
+    }
+}
+.topBtn span {
+    font-size: 14px !important;
+}
+.topBtn a {
+    @include breakpoint('lg') {
+        padding: 0;
+    }
+}
