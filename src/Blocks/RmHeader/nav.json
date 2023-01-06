@@ -233,11 +233,6 @@
                 },
                 {
                     "type": "link",
-                    "name": "Moving Checklists",
-                    "href": "/checklists"
-                },
-                {
-                    "type": "link",
                     "name": "Compare Estate Agent fees",
                     "href": "/extraservice.aspx?refid=netanagent"
                 },

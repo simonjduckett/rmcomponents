@@ -5,7 +5,7 @@
     display: block;
     position: fixed;
     right: -100%;
-    width: 300px;
+    width: 200px;
     top: 0;
     bottom: 0;
     transition: all .4s;
@@ -16,9 +16,27 @@
     }
     ul li {
         flex-direction: column;
+        border-top: 1px solid #a5a5a5;
+        &:first-of-type {
+            border: none;
+        }
+        a:after {
+            color: #fff;
+            position: absolute;
+            right: 0;
+        }
     }
     ul div {
         position: static;
+        a {
+            font-size: 1.2rem !important;
+            padding: 10px 10px 10px 20px;
+            border-top: 1px solid #a5a5a5;
+            white-space: break-spaces;
+        }
+    }
+    a {
+        padding: 10px 5px 10px 10px;
     }
 }
 

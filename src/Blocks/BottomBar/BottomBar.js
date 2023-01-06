@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./BottomBar.module.scss"
-import { Row, Col, Container } from 'react-bootstrap'
+import { Row, Col } from 'react-bootstrap'
 import { Button, List, ListItem, NavToggle } from "../../components";
 import '../../global/styles/global.scss'
 

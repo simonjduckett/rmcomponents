@@ -1,8 +1,9 @@
 import React from 'react'
-import { Row, Col, Container } from "react-bootstrap";
-import { Nav, NavBar, NavCollapse, NavDropdown, NavLink, NavToggle, DropdownItem, Logo, Button } from '../../components';
+import { Row, Col, Container, InputGroup, FormControl } from "react-bootstrap";
+import { Nav, NavBar, NavCollapse, NavDropdown, NavLink, DropdownItem, Logo, Button } from '../../components';
 import BottomBar from '../BottomBar/BottomBar';
 import styles from './RmHeader.module.scss';
+import ButtonBs from 'react-bootstrap/Button';
 
 function genLinks(link, icon = 'down') {
     return (
@@ -18,8 +19,8 @@ function genLinks(link, icon = 'down') {
 const RmHeader = props => {
     return ( 
         <header id={props.id ? props.id : null} className={styles.header}>
-            <Container style={{minHeight: 'auto', position: 'relative'}}>
-                <Row>
+            <Container className='mx-0 mx-md-auto' style={{position: 'relative'}}>
+                <Row className='align-items-center'>
                     <Col xs={12} sm={3} md={4}>
                         <a href='/'>
                             <Logo customClass={styles.logo} />
@@ -56,6 +57,14 @@ const RmHeader = props => {
                                 }
                             })
                             : null}
+                            <form className={styles.searchForm} action='https://www.reallymoving.com/search'>
+                                <InputGroup>
+                                    <FormControl type='text' name='searchtext' required />
+                                    <ButtonBs type='submit'>
+                                        <i></i>
+                                    </ButtonBs>
+                                </InputGroup>
+                            </form>
                         </Nav>
                     </NavCollapse>
                 </Container>

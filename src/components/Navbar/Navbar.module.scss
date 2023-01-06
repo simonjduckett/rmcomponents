@@ -1,4 +1,5 @@
 @import '../../global/styles/vars';
+@import '../../global/styles/mixins';
 
 .navbar {
     border: 1px solid #000;
@@ -14,6 +15,11 @@
         font-weight: 700;
         &:hover {
             background-color: $rm-pink;
+        }
+        @include breakpoint('md') {
+            &:hover {
+                background-color: $rm-purple;
+            }
         }
     }
     li div {
