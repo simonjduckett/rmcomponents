@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Row, Col, Container, InputGroup, FormControl } from "react-bootstrap";
 import { Nav, NavBar, NavCollapse, NavDropdown, NavLink, DropdownItem, Logo, Button } from '../../components';
 import BottomBar from '../BottomBar/BottomBar';
@@ -17,6 +17,14 @@ function genLinks(link, icon = 'down') {
 }
 
 const RmHeader = props => {
+
+    let [topnav, setTopnav] = useState(false)
+    let [nav, setNav] = useState(false)
+
+    useEffect(() => {
+        if(props.topnav) setTopnav(props.topnav)
+        if(props.nav) setNav(props.nav)
+    }, [])
     return ( 
         <header id={props.id ? props.id : null} className={styles.header}>
             <Container className='mx-0 mx-md-auto' style={{position: 'relative'}}>
@@ -29,8 +37,8 @@ const RmHeader = props => {
                     <Col xs={12} sm={9} md={8}>
                         <NavCollapse bp='md'>
                             <Nav customClass='justify-content-end'>
-                                {props.topnav ?
-                                props.topnav.links.map((link, i) => {
+                                {topnav ?
+                                topnav.links.map((link, i) => {
                                     return <NavLink customClass={styles.topNavLink} key={i} href={link.href}>{link.name}</NavLink>
                                 })
                                 : null}
@@ -46,8 +54,8 @@ const RmHeader = props => {
                 <Container>
                     <NavCollapse id='mainNav' bp='md' bg='452765'>
                         <Nav customClass={styles.mainNav}>
-                            {props.nav ?
-                            props.nav.links.map((link, i) => {
+                            {nav ?
+                            nav.links.map((link, i) => {
                                 if(link.type === 'link') {
                                     return <NavLink key={i} href={link.href}>{link.name}</NavLink>
                                 }

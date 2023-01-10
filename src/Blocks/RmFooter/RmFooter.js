@@ -12,7 +12,7 @@ const RmFooter = () => {
         <footer className={styles.footer}>
             <Container>
                 <Row>
-                    <Col sm={3}>
+                    <Col className="ps-5 ps-md-0" md={3}>
                         <h3>Contact us</h3>
                         <List customClass={styles.contact}>
                             <ListItem>
@@ -34,7 +34,7 @@ const RmFooter = () => {
                             </ListItem>
                         </List>
                     </Col>
-                    <Col sm={3}>
+                    <Col className="ps-5 ps-md-0" md={3}>
                         <h3>Services</h3>
                         <List type='pinkchevron'>
                             <ListItem><a href='#'>Conveyancing</a></ListItem>
@@ -45,7 +45,7 @@ const RmFooter = () => {
                             <ListItem><a href='#'>International removals</a></ListItem>
                         </List>
                     </Col>
-                    <Col sm={3}>
+                    <Col className="ps-5 ps-md-0" md={3}>
                         <h3>Useful information</h3>
                         <List type='pinkchevron'>
                             <ListItem><a href="/about-us">About us</a></ListItem>
@@ -59,25 +59,25 @@ const RmFooter = () => {
                             <ListItem><a href="/privacy-policy">Privacy policy</a></ListItem>
                         </List>
                     </Col>
-                    <Col sm={3}>
+                    <Col md={3}>
                         <Logo type='footer' customClass={styles.logo} />
-                        <Row>
-                            <Col md={3}>
+                        <Row className="justify-content-center">
+                            <Col xs={2} md={6} lg={3} className='text-center mb-3'>
                                 <a target='_blank' href='http://www.facebook.com/reallymoving'>
                                     <img width='45' src={Facebook} />
                                 </a>
                             </Col>
-                            <Col md={3}>
+                            <Col xs={2} md={6} lg={3} className='text-center mb-3'>
                                 <a target='_blank' href='http://twitter.com/#!/reallymoving'>
                                     <img width='45' src={twitter} />
                                 </a>
                             </Col>
-                            <Col md={3}>
+                            <Col xs={2} md={6} lg={3} className='text-center mb-3'>
                                 <a target='_blank' href='https://www.instagram.com/wearereallymoving/'>
                                     <img width='45' src={instagram} />
                                 </a>
                             </Col>
-                            <Col md={3}>
+                            <Col xs={2} md={6} lg={3} className='text-center mb-3'>
                                 <a target='_blank' href='https://www.linkedin.com/company/reallymoving-com'>
                                     <img width='45' src={linkedin} />
                                 </a>

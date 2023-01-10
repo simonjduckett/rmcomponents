@@ -1,6 +1,6 @@
 {
   "name": "@simonjduckett/rmcomponents",
-  "version": "0.1.12",
+  "version": "0.1.15",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

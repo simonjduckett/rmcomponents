@@ -4,9 +4,10 @@ import styles from "./card.module.scss";
 
 const Card = props => {
     return ( 
-        <div 
+        <div
+        id={props.id ? props.id : ''}
         className={`${styles.card} 
-            ${props.theme === 'purple' ? styles.purple : null}`}
+            ${props.theme === 'purple' ? styles.purple : null} ${props.customClass ? props.customClass : ''}`}
         style={props.align === 'center' ? {textAlign: 'center'} : null}
         >
             {props.children}
@@ -15,6 +16,8 @@ const Card = props => {
 }
 
 Card.propTypes = {
+    id: PropTypes.string,
+    customClass: PropTypes.string,
     align: PropTypes.string,
     theme: PropTypes.string
 }

@@ -17,13 +17,13 @@ const Logo = props => {
     if (props.type === 'twenty') type = 'twenty'
 
     if (type === 'horizontal') {
-        return <Horizontal className={`${props.customClass ? props.customClass : null}`} width={props.width ? props.width : width} fill='#000000' style={{fill: '#000'}}/>
+        return <Horizontal id={props.id ? props.id : ''} className={`${props.customClass ? props.customClass : null}`} width={props.width ? props.width : width} fill='#000000' style={{fill: '#000'}}/>
     } 
     if(type === 'stacked') {
-        return <Stacked className={`${props.customClass ? props.customClass : null}`} width={props.width ? props.width : width}  />
+        return <Stacked id={props.id ? props.id : ''} className={`${props.customClass ? props.customClass : null}`} width={props.width ? props.width : width}  />
     }
     if(type === 'footer') {
-        return <Footer className={`${props.customClass ? props.customClass : null}`} width={props.width ? props.width : width}  />
+        return <Footer id={props.id ? props.id : ''} className={`${props.customClass ? props.customClass : null}`} width={props.width ? props.width : width}  />
     }
     if(type === 'twenty') {
         logo = twenty
@@ -34,7 +34,8 @@ const Logo = props => {
 Logo.propTypes = {
     type: PropTypes.string,
     width: PropTypes.string,
-    customClass: PropTypes.string
+    customClass: PropTypes.string,
+    id: PropTypes.string
 }
 
 export default Logo;
