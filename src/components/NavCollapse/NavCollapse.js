@@ -1,6 +1,7 @@
 import React from "react";
 import styles from './NavCollapse.module.scss'
 import '../../global/styles/global.scss'
+import PropTypes from "prop-types"
 
 const NavCollapse = props => {
     let bp = styles.md
@@ -12,12 +13,18 @@ const NavCollapse = props => {
     return ( 
         <div 
         id={props.id ? props.id : 'navCollapse'} 
-        className={`${styles.NavCollapse} ${bp}`}
+        className={`${styles.NavCollapse} ${bp} ${props.customClass ? props.customClass : ''}`}
         style={{background: `#${props.bg ? props.bg : null}`}}
         >
         {props.children}
         </div>
      );
+}
+
+NavCollapse.propTypes = {
+    id: PropTypes.string,
+    customClass: PropTypes.string,
+    bg: PropTypes.string,
 }
  
 export default NavCollapse;
